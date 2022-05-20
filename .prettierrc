@@ -1,0 +1,12 @@
+{
+  "endOfLine": "lf",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "semi": false,
+  "trailingComma": "none",
+  "printWidth": 80,
+  "twigPrintWidth": 80,
+  "twigAlwaysBreakObjects": false,
+  "arrowParens": "avoid",
+  "plugins": ["./node_modules/prettier-plugin-twig-melody"]
+}
