@@ -1,3 +1,102 @@
 <section>
-  _solution.twig
+  <div class="flex flex-col items-center px-4 bg-gray-100">
+    <h2 class="inline-flex items-center justify-center py-4 mx-auto text-2xl font-bold leading-9 text-white bg-blue-700 rounded-full -mt-[34px] px-14 mb-10">
+      Let’s fix it.
+    </h2>
+    <div class="flex flex-col gap-12">
+      <div>
+        <p class="text-3xl font-bold leading-10 text-center">
+          <strong class="font-bold">Take better control</strong> of your biological
+          and contaminant removal process.
+        </p>
+      </div>
+      <div>
+        <ul class="flex flex-col gap-12">
+          {% for li in [
+            {
+              title: 'Achieve Compliance',
+              contents: 'Leverage our experience in ever-changing permit requirements and regulations.'
+            },
+            {
+              title: 'Minimize Operational Risk',
+              contents: 'Reduce your risk with consistent on-time delivery and premium product quality.'
+            },
+            {
+              title: 'Optimize Removal Costs',
+              contents: 'Take the guesswork out of dosing and cut cost-per-pound of nutrients removed.'
+            }
+          ] %}
+            <li class="flex flex-row gap-6">
+              <div class="li-check"></div>
+              <div class="flex flex-col gap-2">
+                <p class="text-2xl font-bold leading-9">
+                  {{ li.title }}
+                </p>
+                <p class="text-lg leading-6 text-gray-700">
+                  {{ li.contents }}
+                </p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="relative my-16 before:dots-pattern before:content-[''] before:absolute before:w-24 before:h-24 before:-top-12 before:z-0 after:dots-pattern after:content-[''] after:absolute after:w-24 after:h-24 after:-bottom-12 after:z-0 after:right-0">
+      <div class="relative z-50 flex flex-col gap-2 bg-white rounded-lg p-7">
+        <h3 class="text-2xl font-bold leading-9 text-center">
+          We can help.
+        </h3>
+        <p class="text-lg leading-6 text-center text-gray-700">
+          Learn how you can optimize your removal process reliably and
+          cost-effectively.
+        </p>
+        <form class="flex flex-col gap-6">
+          {% for field in [
+            {
+              type: 'text',
+              name: 'name',
+              label: 'Name',
+              placeholder: 'Enter your name'
+            },
+            {
+              type: 'email',
+              name: 'email',
+              label: 'Email',
+              placeholder: 'Enter your email'
+            },
+            {
+              type: 'tel',
+              name: 'phone',
+              label: 'Phone',
+              placeholder: 'Enter your phone number'
+            },
+            { type: 'text', name: 'organization', label: 'Organization' }
+          ] %}
+            <div>
+              <label class="block">
+                <span class="p-2 text-lg font-semibold">{{ field.label }}</span>
+                <input type="{{ field.type }}"
+                  name="{{ field.name }}"
+                  id="{{ field.name }}"
+                  {{
+                  field.placeholder is defined
+                    and field.placeholder is not empty
+                    ? 'placeholder="' ~ field.placeholder ~ '"'
+                    : ''
+                  }}
+                  class="block w-full p-3 mt-1 border border-gray-300 rounded-md selection:bg-gray-300 selection:bg-opacity-50 focus:border-gray-300 focus:ring focus:ring-gray-300 focus:ring-opacity-50" />
+              </label>
+            </div>
+          {% endfor %}
+          <div>
+            <button class="flex items-center justify-center w-full px-6 py-4 mx-auto text-lg font-bold leading-5 text-center text-white rounded-full bg-secondary"
+              type="submit">
+              Send me more information
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
