@@ -1,0 +1,40 @@
+<section>
+  <div class="flex flex-col">
+    <div class="z-10">
+      <div class="p-4">
+        <h1 class="text-3xl font-bold leading-10 text-center">
+          Never worry about your wastewater permit limits again.
+        </h1>
+      </div>
+
+      {# 3 : 2 #}
+      <div class="p-4 -mb-[33.333333vw]">
+        <div class="relative w-full aspect-[3/2] rounded-md shadow-card overflow-hidden">
+          <picture class="">
+            {# <source media="(min-width: 800px)" srcset="/img/water-plant-cover-375w.jpg" /> #}
+            <source media="(min-width: 1px)"
+              srcset="/img/water-plant-cover-375w.jpg" />
+            <img data-src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3Cpath fill='%23C1CFDE' d='M0 0h3v2H0z'/%3E%3C/svg%3E"
+              class="w-full"
+              loading="lazy"
+              alt="Water Plant Aerial Photograph" />
+          </picture>
+          <button type="button"
+            data-video="https://www.youtube.com/watch?v=DKb9LRCXLDY"
+            class="absolute inset-0 flex flex-col items-center justify-center w-full bg-black bg-opacity-40">
+            {% include '_partials/_play_button.svg.twig' %}
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="z-0 pt-[calc(33.333333vw-18px)] text-white bg-blue-700">
+      <div class="px-4 py-8">
+        <p class="text-2xl text-center">
+          Empowering Clean Water® by enhancing the biological removal of harmful
+          nutrients in wastewater.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -26,6 +26,11 @@
 
 {# -- Any <link> tags that should be included in the <head> #}
 {% block headLinks %}
+  {# Favicons #}
+  <link rel="icon" href="/img/favicon.ico" sizes="any" />
+  <link rel="icon" href="/img/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
@@ -59,11 +64,12 @@
 
     {% endblock %}
 
+    {# No footers in this project #}
     {# -- Info footer -- #}
-    {% include '_partials/_site_footer.twig' %}
+    {# {% include '_partials/_site_footer.twig' %} #}
 
     {# -- HTML Footer -- #}
-    {% include '_partials/_global_footer.twig' %}
+    {# {% include '_partials/_global_footer.twig' %} #}
   </div>
 {% endblock %}
 

@@ -45,7 +45,7 @@
     iframe.setAttribute('frameborder', '0')
     iframe.setAttribute('allow', 'autoplay; encrypted-media; fullscreen')
     iframe.setAttribute('allowfullscreen', '')
-    iframe.setAttribute('class', 'w-[100vw] h-[56.25vw] sm:w-[90vw] sm:h-[50.625vw] lg:w-[75vw] lg:h-[42.1875vw] z-50 md:rounded lg:rounded-lg')
+    iframe.setAttribute('class', 'w-full aspect-video md:rounded lg:rounded-lg')
     iframe.src = iframeSrc
     return iframe
   }
@@ -76,7 +76,7 @@
       'w-screen',
       'overflow-hidden',
       'box-border',
-      'bg-white',
+      'bg-black',
       'bg-opacity-80',
       'z-0',
     )
@@ -85,24 +85,34 @@
 
     overlay.addEventListener('click', () => _closeModal())
 
+    let frameContainer = document.createElement('div')
+    frameContainer.classList.add(
+      'relative',
+      'w-[calc(100vw)]',
+      'md:max-w-screen-md',
+      'z-50',
+    )
+
     const frame = _renderFrame()
 
-    if (frame) _lightboxContainer.appendChild(frame)
+    if (frame) frameContainer.appendChild(frame)
 
     let closeIconBtn = document.createElement('button')
     closeIconBtn.classList.add(
-      'fixed',
-      'top-4',
-      'right-4',
-      'w-6',
-      'h-6'
+      'absolute',
+      '-top-9',
+      'left-[clamp(calc(100%-2rem),calc(100vw-4rem),100%)]',
+      'w-8',
+      'h-8'
     )
 
-    closeIconBtn.innerHTML = `<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M14 27.5625C6.50781 27.5625.4375 21.4922.4375 14 .4375 6.50781 6.50781.4375 14 .4375 21.4922.4375 27.5625 6.50781 27.5625 14c0 7.4922-6.0703 13.5625-13.5625 13.5625Zm0-25.375C7.50859 2.1875 2.1875 7.44297 2.1875 14c0 6.4914 5.25547 11.8125 11.8125 11.8125 6.4914 0 11.8125-5.2555 11.8125-11.8125C25.8125 7.50859 20.557 2.1875 14 2.1875Zm5.1844 15.6023L15.3945 14l3.7899-3.7898c.257-.25708.257-.6727 0-.92973l-.4649-.46484c-.257-.25704-.6726-.25704-.9297 0L14 12.6055l-3.7898-3.78987c-.25708-.25704-.6727-.25704-.92973 0l-.46484.46484c-.25704.25703-.25704.67265 0 .92973L12.6055 14l-3.78987 3.7898c-.25704.2571-.25704.6727 0 .9297l.46484.4649c.25703.257.67265.257.92973 0L14 15.3945l3.7898 3.7899c.2571.257.6727.257.9297 0l.4649-.4649c.2515-.257.2515-.6726 0-.9297Z" fill="#19191A"/></svg>`
-
-    _lightboxContainer.appendChild(closeIconBtn);
+    closeIconBtn.innerHTML = `<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><path d="M14 27.5625C6.50781 27.5625.4375 21.4922.4375 14 .4375 6.50781 6.50781.4375 14 .4375 21.4922.4375 27.5625 6.50781 27.5625 14c0 7.4922-6.0703 13.5625-13.5625 13.5625Zm0-25.375C7.50859 2.1875 2.1875 7.44297 2.1875 14c0 6.4914 5.25547 11.8125 11.8125 11.8125 6.4914 0 11.8125-5.2555 11.8125-11.8125C25.8125 7.50859 20.557 2.1875 14 2.1875Zm5.1844 15.6023L15.3945 14l3.7899-3.7898c.257-.25708.257-.6727 0-.92973l-.4649-.46484c-.257-.25704-.6726-.25704-.9297 0L14 12.6055l-3.7898-3.78987c-.25708-.25704-.6727-.25704-.92973 0l-.46484.46484c-.25704.25703-.25704.67265 0 .92973L12.6055 14l-3.78987 3.7898c-.25704.2571-.25704.6727 0 .9297l.46484.4649c.25703.257.67265.257.92973 0L14 15.3945l3.7898 3.7899c.2571.257.6727.257.9297 0l.4649-.4649c.2515-.257.2515-.6726 0-.9297Z" fill="#FFFFFF"/></svg>`
 
     closeIconBtn.addEventListener('click', () => _closeModal())
+
+    frameContainer.appendChild(closeIconBtn);
+
+    _lightboxContainer.appendChild(frameContainer);
 
     document.body.appendChild(_lightboxContainer)
 

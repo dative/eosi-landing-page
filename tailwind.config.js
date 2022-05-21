@@ -9,6 +9,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'white': '#FFFFFF',
+      'black': '#000000',
       'emphasis': '#F7A341',
       'secondary': '#26874B',
       'blue': {
@@ -37,10 +38,10 @@ module.exports = {
         'mobile': '375px',
         'desktop': '1194px',
       },
+      boxShadow: {
+        'card': '0px 10px 70px rgba(0, 0, 0, 0.08)',
+      },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [],
 }

@@ -6,6 +6,12 @@
  * @Author: webrgp
  * @Date: 2022-04-28 16:07:33
  * @Last Modified by: webrgp
- * @Last Modified time: 2022-05-19 23:32:13
+ * @Last Modified time: 2022-05-20 18:43:43
  *
  */
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-900 font-sans;
+  }
+}

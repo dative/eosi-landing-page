@@ -19,6 +19,7 @@ mix.ts("src/js/utils/lazysizes-wrapper.ts", "public/js")
 mix.postCss("src/css/app.css", "public/css")
 
 mix.copyDirectory('src/img/**', 'public/img')
+mix.copyDirectory('static/**', 'public')
 
 if (!mix.inProduction()) {
   mix.sourceMaps();
