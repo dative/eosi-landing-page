@@ -7,17 +7,72 @@
 
 {% block content %}
   <section>
-    <h1>
-      content
-    </h1>
+    <h1 class="text-3xl font-bold text-center mt-9">Never worry about your wastewater permit limits again. </h1>
+    <div class="h-[308px] bg-blue-700">
+      <h1 class="text-2xl text-center text-white">Empowering Clean Water® by enhancing the biological removal of harmful nutrients in wastewater.</h1>
+    </div>
+    <div class="flex flex-col">
+      <div class="flex px-4 mt-9">
+        <div>{% include '_partials/_graph.svg.twig' %}</div>
+        <p class="ml-4 text-lg">Are you having <b>issues</b> with your wastewater treatment process?</p>
+      </div>
+      <div class="flex flex-col items-center divide-y divide-gray-300 px-[75px]">
+        <p class="px-3 py-4 text-lg text-center text-gray-700"><b>Inconsistent</b> nutrient removal levels.</p>
+        <p class="px-3 py-4 text-lg text-center text-gray-700"><b>Inaccurate</b> suplemental carbon dosing .</p>
+        <p class="px-3 py-4 text-lg text-center text-gray-700"><b>Inadequate</b> delivery and product quality.</p>
+      </div>
+      <button class="self-center w-64 p-4 text-white bg-blue-700 rounded-full mb-[-32px] z-10">
+        <span class="text-2xl font-bold">Let's Fix it.</span>
+      </button>
+      <div class="p-4 bg-gray-100">
+        <h1 class="px-5 mt-16 text-3xl font-bold text-center">Take better control of your biological and contaminant removal process.</h1>
+        <div class="flex mt-12">
+          <div>{% include '_partials/_check.svg.twig' %}</div>
+          <div class="flex flex-col ml-6">
+            <h2 class="text-2xl font-bold">Achieve Compliance</h2>
+            <p class="text-gray-700">Leverage our experience in ever-changing permit requirements and regulations.</p>
+          </div>
+        </div>
+        <div class="flex mt-12">
+          <div>{% include '_partials/_check.svg.twig' %}</div>
+          <div class="flex flex-col ml-6">
+            <h2 class="text-2xl font-bold">Minimize Operational Risk</h2>
+            <p class="text-gray-700">Reduce your risk with consistent on-time delivery and premium product quality.</p>
+          </div>
+        </div>
+        <div class="flex mt-12">
+          <div>{% include '_partials/_check.svg.twig' %}</div>
+          <div class="flex flex-col ml-6">
+            <h2 class="text-2xl font-bold">Optimize Removal Costs</h2>
+            <p class="text-gray-700">Take the guesswork out of dosing and cut cost-per-pound of nutrients removed.</p>
+          </div>
+        </div>
+        <div class="mb-[-45px] z-0 mt-3.5">{% include '_partials/_dots.svg.twig' %}</div>
+        <div class="z-20 flex flex-col bg-white rounded-lg p-7">
+          <h1 class="text-2xl font-bold text-center">We can help.</h1>
+          <p class="mt-2 text-center text-gray-700">Take the guesswork out of dosing and cut cost-per-pound of nutrients removed.</p>
+          <span>Name</span>
+          <input type="text" class="border-gray-100 border-1">
+          <span>Email</span>
+          <input type="text" class="border-gray-100 border-1">
+          <span>Phone</span>
+          <input type="text" class="border-gray-100 border-1">
+          <span>Organization</span>
+          <input type="text" class="border-gray-100 border-1">
+
+          <button class="self-center w-full p-4 text-white rounded-full bg-secondary">
+            <span class="text-lg font-bold">Send me more information</span>
+          </button>
+        </div>
+        <div class="mt-[-45px] z-0 mb-3.5 w-min ml-auto">{% include '_partials/_dots.svg.twig' %}</div>
+
+      </div>
+    </div>
   </section>
 {% endblock %}
 
 {% block subcontent %}
   <section>
-    <h2>
-      subcontent
-    </h2>
   </section>
 {% endblock %}
 
