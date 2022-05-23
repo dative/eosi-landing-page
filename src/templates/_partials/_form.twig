@@ -1,0 +1,67 @@
+<div>
+  <div class="transition-[max-height] duration-500 ease-in-out relative overflow-hidden max-h-0">
+    <div class="py-28">
+      <p class="text-center">
+        <strong class="block text-3xl font-extrabold leading-10">
+          Thank You
+        </strong>
+        <span class="text-[22px] leading-9">
+          Your message has been sent. Our team will follow up with you.
+        </span>
+      </p>
+    </div>
+  </div>
+  <form class="transition-[max-height] duration-500 ease-in-out relative overflow-hidden flex flex-col gap-6 max-h-[600px]">
+    <div>
+      <h3 class="text-2xl font-bold leading-9 text-center">
+        We can help.
+      </h3>
+      <p class="text-lg leading-6 text-center text-gray-700">
+        Learn how you can optimize your removal process reliably and
+        cost-effectively.
+      </p>
+    </div>
+    {% for field in [
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+        placeholder: 'Enter your name'
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+        placeholder: 'Enter your email'
+      },
+      {
+        type: 'tel',
+        name: 'phone',
+        label: 'Phone',
+        placeholder: 'Enter your phone number'
+      },
+      { type: 'text', name: 'organization', label: 'Organization' }
+    ] %}
+      <div>
+        <label class="block">
+          <span class="p-2 text-lg font-semibold">{{ field.label }}</span>
+          <input type="{{ field.type }}"
+            name="{{ field.name }}"
+            id="{{ field.name }}"
+            {{
+            field.placeholder is defined and field.placeholder is not empty
+              ? 'placeholder="' ~ field.placeholder ~ '"'
+              : ''
+            }}
+            class="block w-full p-3 mt-1 border border-gray-300 rounded-md selection:bg-gray-300 selection:bg-opacity-50 focus:border-gray-300 focus:ring focus:ring-gray-300 focus:ring-opacity-50" />
+        </label>
+      </div>
+    {% endfor %}
+    <div>
+      <button class="flex items-center justify-center w-full px-6 py-4 mx-auto text-lg font-bold leading-5 text-center text-white rounded-full bg-secondary"
+        type="submit">
+        Send me more information
+      </button>
+    </div>
+  </form>
+</div>
