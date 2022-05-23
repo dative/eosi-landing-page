@@ -6,7 +6,7 @@ const leadForm = (() => {
 
     _form?.addEventListener('transitionend', () => {
       _form?.previousElementSibling?.classList.replace('max-h-0', 'max-h-[600px]')
-      // _form?.remove()
+      _form?.previousElementSibling?.classList.replace('opacity-0', 'opacity-100')
     })
 
     _form?.previousElementSibling?.addEventListener('transitionend', () => {
@@ -14,6 +14,7 @@ const leadForm = (() => {
     })
 
     _form?.classList.replace('max-h-[600px]', 'max-h-0')
+    _form?.classList.replace('opacity-100', 'opacity-0')
 
   }
 
