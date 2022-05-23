@@ -11,7 +11,9 @@
       </p>
     </div>
   </div>
-  <form class="transition-all duration-500 ease-in-out relative overflow-hidden flex flex-col gap-6 max-h-[600px] opacity-100">
+  <form method="post"
+    action="https://formbucket.com/f/buk_U4HT5xbmpa33kpJ3JCEaFfIb"
+    class="transition-all duration-500 ease-in-out relative overflow-hidden flex flex-col gap-6 max-h-[800px] opacity-100">
     <div>
       <h3 class="text-2xl font-bold leading-9 text-center">
         We can help.
@@ -26,24 +28,37 @@
         type: 'text',
         name: 'name',
         label: 'Name',
-        placeholder: 'Enter your name'
+        placeholder: 'Your Name',
+        value: 'Joe Smith',
+        required: true
       },
       {
         type: 'email',
         name: 'email',
         label: 'Email',
-        placeholder: 'Enter your email'
+        placeholder: 'your@email.com',
+        value: 'info@mail.com',
+        required: true
       },
       {
         type: 'tel',
         name: 'phone',
         label: 'Phone',
-        placeholder: 'Enter your phone number'
+        placeholder: '555-444-3333',
+        value: '555-444-3333',
+        required: true
       },
-      { type: 'text', name: 'organization', label: 'Organization' }
+      {
+        type: 'text',
+        name: 'organization',
+        label: 'Organization',
+        placeholder: 'Acme, Inc.',
+        value: 'Acme, Inc.',
+        required: true
+      }
     ] %}
       <div>
-        <label class="block">
+        <label class="block px-1">
           <span class="p-2 text-lg font-semibold">{{ field.label }}</span>
           <input type="{{ field.type }}"
             name="{{ field.name }}"
@@ -53,10 +68,16 @@
               ? 'placeholder="' ~ field.placeholder ~ '"'
               : ''
             }}
-            class="block w-full p-3 mt-1 border border-gray-300 rounded-md selection:bg-gray-300 selection:bg-opacity-50 focus:border-gray-300 focus:ring focus:ring-gray-300 focus:ring-opacity-50" />
+            class="block w-full p-3 mt-1 border border-gray-300 rounded-md selection:bg-gray-300 selection:bg-opacity-50 focus:border-gray-300 focus:ring focus:ring-gray-300 focus:ring-opacity-50"
+            {{ field.required ? 'required' : '' }}
+            value="{{ field.value }}" />
         </label>
       </div>
     {% endfor %}
+    <div>
+      <div class="g-recaptcha"
+        data-sitekey="6LdIhBIgAAAAAJ7M1DG-hddmrhO3FLvguF_8iepW"></div>
+    </div>
     <div>
       <button class="flex items-center justify-center w-full px-6 py-4 mx-auto text-lg font-bold leading-5 text-center text-white rounded-full bg-secondary"
         type="submit">

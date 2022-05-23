@@ -1,5 +1,10 @@
 {% extends '_layouts/_generic_page_layout.twig' %}
 
+{% block headJs %}
+  {{ parent() }}
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+{% endblock %}
+
 {% block content %}
   {% include '_partials/_hero_intro.twig' %}
   {% include '_partials/_problem.twig' %}
