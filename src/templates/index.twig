@@ -1,145 +1,141 @@
 {% extends '_layouts/_generic_page_layout.twig' %}
 
 {% block headLinks %}
-  {{ parent() }}
-  <link rel="amphtml" href="/amp" />
+	{{ parent() }}
+	<link rel="amphtml" href="/amp"/>
 {% endblock %}
 
 {% block content %}
-  <section>
-    <h1 class="text-3xl font-bold text-center mt-9">
-      Never worry about your wastewater permit limits again.
-    </h1>
+	<section>
+		<div class="bg-gray-100">
+			<h1 class="pt-8 text-3xl font-bold text-center">
+				Never worry about your wastewater permit limits again.
+			</h1>
 
-    <div class="h-[308px] bg-blue-700 flex flex-col mt-[35%]">
-      <div class="px-4 -mt-[30%]">
-        <div class="flex items-center justify-center">
-          <picture>
-            <source srcset="../img/water-plant-cover-1194w.jpg"
-              media="(min-width: 721px)" />
-            <source srcset="../img/water-plant-cover-720w.jpg"
-              media="(min-width: 376px)" />
-            <img class="rounded-md" src="../img/water-plant-cover-375w.jpg" />
-          </picture>
-          <div class="absolute">
-            <button data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-              {% include '_partials/_play_button.svg.twig' %}
-            </button>
-          </div>
-        </div>
-      </div>
-      <h1 class="mt-8 text-2xl text-center text-white">
-        Empowering Clean Water® by enhancing the biological removal of harmful
-        nutrients in wastewater.
-      </h1>
-    </div>
-    <div class="flex flex-col">
-      <div class="flex px-4 mt-9">
-        <div>
-          {% include '_partials/_graph.svg.twig' %}
-        </div>
-        <p class="ml-4 text-lg">
-          Are you having <b>issues</b> with your wastewater treatment process?
-        </p>
-      </div>
-      <div class="flex flex-col items-center divide-y divide-gray-300 px-[75px]">
-        <p class="px-3 py-4 text-lg text-center text-gray-700">
-          <b>Inconsistent</b> nutrient removal levels.
-        </p>
-        <p class="px-3 py-4 text-lg text-center text-gray-700">
-          <b>Inaccurate</b> suplemental carbon dosing .
-        </p>
-        <p class="px-3 py-4 text-lg text-center text-gray-700">
-          <b>Inadequate</b> delivery and product quality.
-        </p>
-      </div>
-      <button class="self-center w-64 p-4 text-white bg-blue-700 rounded-full mb-[-32px] z-10">
-        <span class="text-2xl font-bold">Let's Fix it.</span>
-      </button>
-      <div class="p-4 bg-gray-100">
-        <h1 class="px-5 mt-16 text-3xl font-bold text-center">
-          Take better control of your biological and contaminant removal
-          process.
-        </h1>
-        <div class="flex mt-12">
-          <div>
-            {% include '_partials/_check.svg.twig' %}
-          </div>
-          <div class="flex flex-col ml-6">
-            <h2 class="text-2xl font-bold">
-              Achieve Compliance
-            </h2>
-            <p class="text-gray-700">
-              Leverage our experience in ever-changing permit requirements and
-              regulations.
-            </p>
-          </div>
-        </div>
-        <div class="flex mt-12">
-          <div>
-            {% include '_partials/_check.svg.twig' %}
-          </div>
-          <div class="flex flex-col ml-6">
-            <h2 class="text-2xl font-bold">
-              Minimize Operational Risk
-            </h2>
-            <p class="text-gray-700">
-              Reduce your risk with consistent on-time delivery and premium
-              product quality.
-            </p>
-          </div>
-        </div>
-        <div class="flex mt-12">
-          <div>
-            {% include '_partials/_check.svg.twig' %}
-          </div>
-          <div class="flex flex-col ml-6">
-            <h2 class="text-2xl font-bold">
-              Optimize Removal Costs
-            </h2>
-            <p class="text-gray-700">
-              Take the guesswork out of dosing and cut cost-per-pound of
-              nutrients removed.
-            </p>
-          </div>
-        </div>
-        <div class="mb-[-45px] z-0 mt-3.5">
-          {% include '_partials/_dots.svg.twig' %}
-        </div>
-        <div class="z-20 flex flex-col bg-white rounded-lg p-7">
-          <h1 class="text-2xl font-bold text-center">
-            We can help.
-          </h1>
-          <p class="mt-2 text-center text-gray-700">
-            Take the guesswork out of dosing and cut cost-per-pound of nutrients
-            removed.
-          </p>
-          <span>Name</span>
-          <input type="text" class="border-gray-100 border-1" />
-          <span>Email</span>
-          <input type="text" class="border-gray-100 border-1" />
-          <span>Phone</span>
-          <input type="text" class="border-gray-100 border-1" />
-          <span>Organization</span>
-          <input type="text" class="border-gray-100 border-1" />
+			<div class="h-2/5 bg-blue-700 flex flex-col mt-[35%]">
+				<div class="px-4 -mt-[30%]">
+					<div class="flex items-center justify-center">
+						<picture>
+							<source srcset="../img/water-plant-cover-1194w.jpg" media="(min-width: 721px)"/>
+							<source srcset="../img/water-plant-cover-720w.jpg" media="(min-width: 376px)"/>
+							<img class="rounded-md" src="../img/water-plant-cover-375w.jpg"/>
+						</picture>
+						<div class="absolute">
+							<button data-video="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+								{% include '_partials/_play_button.svg.twig' %}
+							</button>
+						</div>
+					</div>
+				</div>
+				<h1 class="mt-8 text-2xl text-center text-white">
+					Empowering Clean Water® by enhancing the biological removal of harmful
+																																																																																															        nutrients in wastewater.
+				</h1>
+				<button class="flex self-center justify-around p-3 mt-4 text-white border rounded-full w-52 mb-7">
+					<div class="putPlay bg-no-repeat bg-contain min-w-[25px] min-h-[25px]"></div>
+					<span class="text-base font-bold">See how it works</span>
+				</button>
+			</div>
+			<div class="flex flex-col ">
+				<div class="bg-white">
+					<div class="flex px-4 mt-9">
+						<div>
+							{% include '_partials/_graph.svg.twig' %}
+						</div>
+						<p class="ml-4 text-lg">
+							Are you having
+							<b>issues</b>
+							with your wastewater treatment process?
+						</p>
+					</div>
+					<div class="flex flex-col items-center divide-y divide-gray-300 px-[75px] py-8">
+						{% for n in [
+              { bold: 'Inconsistent', text: ' nutrient removal levels.'},
+              { bold: 'Inaccurate', text: ' suplemental carbon dosing.'},
+              { bold: 'Inadequate', text: ' delivery and product quality.'}
+            ]%}
+							<p class="px-3 py-4 text-lg text-center text-gray-700">
+								<b>{{n.bold}}</b>
+								{{n.text}}
+							</p>
+						{% endfor %}
 
-          <button class="self-center w-full p-4 text-white rounded-full bg-secondary">
-            <span class="text-lg font-bold">Send me more information</span>
-          </button>
-        </div>
-        <div class="mt-[-45px] z-0 mb-3.5 w-min ml-auto">
-          {% include '_partials/_dots.svg.twig' %}
-        </div>
-      </div>
-    </div>
-  </section>
+					</div>
+				</div>
+				<button class="self-center w-56 p-4 text-white bg-blue-700 rounded-full -mt-[32px]">
+					<span class="text-2xl font-bold">Let's Fix it.</span>
+				</button>
+				<div class="p-4">
+					<h1 class="px-5 mt-16 text-3xl font-bold text-center">
+						Take better control of your biological and contaminant removal
+																																																																																																																		          process.
+					</h1>
+					{% for n in [
+          { title: 'Achieve Compliance', description: 'Leverage our experience in ever-changing permit requirements and
+          regulations.'},
+          { title: 'Minimize Operational Risk', description: 'Reduce your risk with consistent on-time delivery and premium
+          product quality.'},
+          { title: 'Optimize Removal Costs', description: 'Take the guesswork out of dosing and cut cost-per-pound of
+          nutrients removed.'}
+        ]%}
+						<div class="flex mt-12">
+							<div class="putCheck bg-no-repeat bg-contain min-w-[45px] min-h-[45px]"></div>
+							<div class="flex flex-col ml-6">
+								<h2 class="text-2xl font-bold">
+									{{n.title}}
+								</h2>
+								<p class="mt-2 text-gray-700">
+									{{n.description}}
+								</p>
+							</div>
+						</div>
+					{% endfor %}
+
+					<div class="mb-[-45px] mt-3.5 putDots bg-no-repeat bg-contain min-w-[90px] min-h-[90px]"></div>
+					<div class="relative flex flex-col bg-white rounded-lg p-7">
+						<div class="visible" id="messageCard">
+							<h1 class="text-2xl font-bold text-center">
+								We can help.
+							</h1>
+							<p class="mt-2 text-center text-gray-700">
+								Take the guesswork out of dosing and cut cost-per-pound of nutrients
+																																																																																																																																																								          removed.
+							</p>
+							{% for n in [
+                { name: 'Name' },
+                { name: 'Email' },
+                { name: 'Phone' },
+                { name: 'Organization' },
+              ] %}
+								<div class="flex flex-col py-4">
+									<label for="{{n.name}}" class="ml-2 text-lg font-semibold">{{n.name}}</label>
+									<input type="text" id="{{n.name}}" name="{{n.name}}" class="p-3 border border-gray-300 rounded-lg">
+								</div>
+							{% endfor %}
+
+							<button class="self-center w-full p-4 mt-4 text-white rounded-full bg-secondary">
+								<span class="text-lg font-bold">Send me more information</span>
+							</button>
+						</div>
+						<div class="hidden h-[480px]" id="messageSent">
+							<div class="flex flex-col items-center justify-center">
+								<h1 class="text-3xl font-extrabold">Thank You</h1>
+								<p class="text-center text-gray-700">Your message has been sent. Our team will follow up with you.</p>
+							</div>
+						</div>
+					</div>
+					<div class="mt-[-45px] mb-3.5 w-min ml-auto putDots bg-no-repeat bg-contain min-w-[90px] min-h-[90px]"></div>
+				</div>
+			</div>
+		</div>
+	</section>
 {% endblock %}
 
 {% block subcontent %}
-  <section></section>
+	<section></section>
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}
 {% block bodyJs %}
-  {{ parent() }}
+	{{ parent() }}
 {% endblock %}
