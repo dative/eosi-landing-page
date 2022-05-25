@@ -35,8 +35,12 @@ module.exports = {
     extend: {
       screens: {
         'mobile': '375px',
-        'desktop': '1194px',
+        'desktop': '1194px'
       },
+      maxWidth: {
+        'mobile': '375px',
+        'desktop': '1194px'
+      }
     },
   },
   plugins: [

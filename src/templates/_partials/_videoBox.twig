@@ -1,0 +1,44 @@
+{#
+
+Video box component
+
+Usage:
+
+{% include '_partials/_videoBox.twig' with {
+  heading: 'Video box text',
+  videoUrl: 'https://www.example.com',
+  flip: true
+} %}
+
+#}
+
+{% if 
+  heading is defined
+  and heading
+  and videoUrl is defined
+  and videoUrl %}
+  {% set flip = flip is defined and flip ? flip : false %}
+  <main class='pt-[37px] desktop:flex desktop:justify-center desktop:items-center 
+    desktop:gap-[30px] desktop:pt-[64px] desktop:mb-10 {{ flip ? "flex-row-reverse" : "" }}'>
+    
+    <h1 class='text-center mb-[26px] font-bold text-[30px] leading-[40px]
+    md:text-[40px] md:leading-[48px] md:max-w-[712px] md:mx-auto
+    md:font-normal desktop:text-6xl desktop:leading-[66px] desktop:text-left'>
+      {{ heading|raw }}
+    </h1>
+
+    <div class='relative flex-shrink-0 w-full desktop:h-[413px] desktop:w-[786px]'>
+      <picture class='relative'>
+        <source srcset='img/water-plant-cover-1194w.jpg' media='(min-width: 1194px)'>
+        <source srcset='img/water-plant-cover-720w.jpg' media='(min-width: 720px)'>
+        <source srcset='img/water-plant-cover-375w.jpg' media='(min-width: 375px)'>
+        <img src='img/water-plant-cover-375w.jpg' alt='' class='object-cover w-full desktop:h-[413px] rounded brightness-75'>
+      </picture>
+      <button type='butto'
+        data-video='{{ videoUrl }}'
+        class='absolute inset-0 flex items-center justify-center'>
+        {% include '_partials/_playButton.svg.twig' %}
+      </button>
+    </div>
+  </main>
+{% endif %}

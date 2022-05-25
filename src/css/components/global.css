@@ -9,3 +9,6 @@
  * @Last Modified time: 2022-05-19 23:32:13
  *
  */
+ body {
+   @apply bg-gray-100
+ }
