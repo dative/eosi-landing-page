@@ -30,40 +30,43 @@
 #}
 {% extends "_boilerplate/_base_web_layout.twig" %}
 
-{% block htmlTag %}
-  <html class="fonts-loaded" lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
-{% endblock htmlTag %}
+	{% block htmlTag %}
+	<html class="fonts-loaded" lang="en" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> {% endblock htmlTag %}
 
-{# -- Page content that should be included in the <head> -- #}
-{% block headContent %}
-  {# -- Any <meta> tags that should be included in the <head> #}
-  {% block headMeta %}{% endblock headMeta %}
+	{# -- Page content that should be included in the <head> -- #}
+	{% block headContent %}
 
-  {# -- Any <link> tags that should be included in the <head> #}
-  {% block headLinks %}{% endblock headLinks %}
+		{# -- Any <meta> tags that should be included in the <head> #}
+		{% block headMeta %}{% endblock headMeta %}
 
-  {# -- Inline and polyfill JS #}
-  {% include "_boilerplate/_head_js.twig" %}
+		{# -- Any <link> tags that should be included in the <head> #}
+		{% block headLinks %}{% endblock headLinks %}
 
-  {# -- Any JavaScript that should be included before </head> -- #}
-  {% block headJs %}{% endblock headJs %}
+		{# -- Inline and polyfill JS #}
+		{% include "_boilerplate/_head_js.twig" %}
 
-  {# -- Inline and critical CSS #}
-  <style>
-    {# -- Any CSS that should be included before </head> -- #}
-    {% block headCss %}{% endblock headCss %}
-  </style>
+		{# -- Any JavaScript that should be included before </head> -- #}
+		{% block headJs %}{% endblock headJs %}
 
-{% endblock headContent %}
+		{# -- Inline and critical CSS #}
+		<style>
+			{
+				# -- Any CSS that should be included before </head> -- #
+			}
+			{% block headCss %}{% endblock headCss %}
+		</style>
 
-{# -- Page content that should be included in the <body> -- #}
-{% block bodyContent %}
-  {# -- Page content that should be included in the <body> -- #}
-  {% block bodyHtml %}{% endblock bodyHtml %}
+	{% endblock headContent %}
 
-  {# -- Inline JS #}
-  {% include "_boilerplate/_body_js.twig" %}
+	{# -- Page content that should be included in the <body> -- #}
+	{% block bodyContent %}
+		{# -- Page content that should be included in the <body> -- #}
+		{% block bodyHtml %}{% endblock bodyHtml %}
 
-  {# -- Any JavaScript that should be included before </body> -- #}
-  {% block bodyJs %}{% endblock bodyJs %}
-{% endblock bodyContent %}
+		{# -- Inline JS #}
+		{% include "_boilerplate/_body_js.twig" %}
+
+		{# -- Any JavaScript that should be included before </body> -- #}
+		{% block bodyJs %}{% endblock bodyJs %}
+	{% endblock bodyContent %}
+</html>
