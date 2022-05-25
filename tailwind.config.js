@@ -35,10 +35,12 @@ module.exports = {
     extend: {
       screens: {
         'mobile': '375px',
-        'desktop': '1194px'
+        'middle': '616px',
+        'desktop': '1194px',
       },
       maxWidth: {
         'mobile': '375px',
+        'middle': '616px',
         'desktop': '1194px'
       }
     },
