@@ -1,0 +1,20 @@
+@layer components {
+  .btn-primary {
+    @apply flex p-5 min-w-[225px] bg-blue-700 justify-center items-center text-white rounded-full font-bold;
+    @screen desktop {
+      @apply w-[282px] h-[77px] font-semibold text-[32px] leading-[48px] p-4
+    }
+  }
+
+  .btn-secondary {
+    @apply flex bg-secondary justify-center items-center p-5 text-white rounded-full font-bold;
+  }
+
+  .btn-emphasis {
+    @apply flex bg-emphasis justify-center items-center p-5 text-white rounded-full font-bold;
+  }
+
+  .btn-video {
+    @apply flex gap-[9px] bg-transparent justify-center items-center px-4 py-3 text-white text-[16px] rounded-full font-bold border-2 border-white;
+  }
+}

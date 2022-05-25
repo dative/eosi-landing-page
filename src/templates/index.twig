@@ -2,23 +2,30 @@
 
 {% block headLinks %}
   {{ parent() }}
-  <link rel="amphtml" href="/amp" />
+  <link rel='amphtml' href='/amp' />
 {% endblock %}
 
 {% block content %}
-  <section>
-    <h1>
-      content
-    </h1>
-  </section>
+  <section class='bg-gray-100'>
+    <div class='bg-blue-700 mt-[-140px] desktop:mt-0 py-[30px]'>
+      <div class='max-w-[706px] mx-auto px-[15px] desktop:px-0'>
+        <h2 class='text-2xl font-normal leading-8
+        text-center text-white pt-[140px] pb-[25px] desktop:p-0 desktop:text-[28px] 
+        desktop:leading-[36px] desktop:mb-[14px]'>
+        Empowering Clean Water® by enhancing the biological removal of harmful 
+        nutrients in wastewater.
+        </h2>
+         {% include '_partials/_button.twig' with {
+            content: 'See How it Works ',
+            variant: 'video',
+            adjust: true
+          } %} 
+      </div>
+    </div>
+  </section>  
 {% endblock %}
 
 {% block subcontent %}
-  <section>
-    <h2>
-      subcontent
-    </h2>
-  </section>
 {% endblock %}
 
 {# -- Any JavaScript that should be included before </body> -- #}
