@@ -34,9 +34,19 @@ module.exports = {
     },
     extend: {
       screens: {
-        'mobile': '375px',
-        'desktop': '1194px',
+        'mob': '375px',
+        'mid': '616px',
+        'des': '1194px',
       },
+      maxWidth: {
+        'mob': '375px',
+        'mid': '616px',
+        'des': '1194px'
+      },
+      boxShadow: {
+        'form': '0px 10px 70px rgba(0, 0, 0, 0.08);',
+        'button': '0px 8px 30px rgba(0, 0, 0, 0.2);'
+      }
     },
   },
   plugins: [

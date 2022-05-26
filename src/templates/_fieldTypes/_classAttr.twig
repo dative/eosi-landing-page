@@ -1,0 +1,10 @@
+{% spaceless %}
+  {% if field is defined and field %}
+    {{ 'class="block w-full mt-1 rounded-md border-solid border-2 p-[10px] '
+      ~ (field.error is defined and field.error
+        ? 'border-emphasis focus:ring focus:ring-emphasis focus:ring-opacity-30'
+        : 'border-gray-300')
+      ~ '"' }}
+  {% endif %}
+{% endspaceless %}
+

@@ -1,0 +1,17 @@
+{% if 
+  field is defined
+  and field
+  and field.type is defined
+  and field.type == 'email'
+ %}
+  <label class='block'>
+    {% include '_fieldTypes/_label.twig' with { field: field } only %}
+    <input 
+    type='email'
+    placeHolder='{{ field.placeHolder }}'
+    name='{{ field.name }}'
+    value='{{ field.value}}'
+    {{ field.required is defined and field.required ? "required" : '' }}
+    {% include "_fieldTypes/_classAttr.twig" with { field: field } only %}>
+  </label>
+ {% endif %}

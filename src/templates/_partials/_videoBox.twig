@@ -1,0 +1,40 @@
+{#
+
+Video box component
+
+Usage:
+
+{% include '_partials/_videoBox.twig' with {
+  heading: 'Video box text',
+  videoUrl: 'https://www.example.com',
+  flip: true
+} %}
+
+#}
+
+{% if 
+  heading is defined
+  and heading
+  and videoUrl is defined
+  and videoUrl %}
+  {% set flip = flip is defined and flip ? flip : false %}
+  <section class='pt-[37px] des:flex des:justify-center des:items-center des:gap-[30px] des:pt-[64px] des:mb-10 {{ flip ? "flex-row-reverse" : "" }}'>
+    <h1 class='text-center mb-[26px] font-bold text-[30px] leading-[40px] mid:text-[44px] mid:leading-[48px] mid:max-w-[712px] mid:mx-auto mid:font-normal des:text-6xl des:leading-[66px] des:text-left'>
+      {{ heading|raw }}
+    </h1>
+
+    <div class='relative flex-shrink-0 w-full des:h-[413px] des:w-[786px]'>
+      <picture class='relative'>
+        <source srcset='img/water-plant-cover-1194w.jpg' media='(min-width: 1194px)'>
+        <source srcset='img/water-plant-cover-720w.jpg' media='(min-width: 720px)'>
+        <source srcset='img/water-plant-cover-375w.jpg' media='(min-width: 375px)'>
+        <img src='img/water-plant-cover-375w.jpg' alt='' class='object-cover w-full des:h-[413px] rounded brightness-75'>
+      </picture>
+      <button type='butto' aria-label='test'
+        data-video='{{ videoUrl }}'
+        class='absolute inset-0 flex items-center justify-center'>
+        <div class='play-button w-[55px] h-[55px] des:w-[82px] des:h-[82px]'></div>
+      </button>
+    </div>
+  </section>
+{% endif %}

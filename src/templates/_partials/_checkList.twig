@@ -1,0 +1,31 @@
+{#
+
+checkList component
+
+Usage:
+
+{% include "_partials/_chackList.twig" with {
+  content: [
+      {
+        heading: 'Achieve Compliance',
+        text: 'Leverage our experience in ever-changing permit requirements and regulations.'
+      }
+    ]
+} %}
+#}
+
+{% if content is defined and content %}
+  {% for c in content %}
+    <div class='flex gap-[24px] mt-[48px]'>
+      <div class='check-icon w-[48px] h-[48px]'></div>
+      <div class='flex-1'>
+        <h3 class='font-bold text-2xl leading-9 mb-[9px] 
+          des:font-extrabold des:text-[32px] des:leading-[42px]'>
+          {{ c.heading }}
+        </h3>
+        <p class='font-normal text-lg leading-[22px] text-gray-700
+        des:font-normal des:text-[22px] des:leading-[36px]'>{{ c.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+{% endif %}

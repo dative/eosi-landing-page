@@ -1,0 +1,27 @@
+{#
+
+List component
+
+Usage:
+
+{% include '_blocks/_list.twig' with {
+  content: [
+    {text: '<strong>Inconsistent</strong> nutrient removal levels.'},
+    {text: '<strong>Inaccurate</strong> supplemental carbon dosing.'},
+    {text: '<strong>Inadequate</strong> delivery and product quality.'}
+  ]
+} %}
+#}
+
+{% if content is defined and content %}
+  <div class="max-w-[225px] mid:max-w-[257px] des:max-w-none des:top-1/2 des:left-[304px] des:absolute">
+    <ul class='mt-[34px] des:flex des:flex-wrap des:gap-[30px]'>
+      {% for c in content %}
+        <li class='des:w-[276px]'>
+          <p class='text-[18px] font-normal leading-[22px] text-gray-900 text-center des:text-left mid:text-[22px] mid:leading-[26px]'>{{ c.text|raw }}</p>
+          <div class='h-[2px] bg-gray-300 my-[18px] {{ c == content|last ? "hidden" : "" }} des:hidden'></div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

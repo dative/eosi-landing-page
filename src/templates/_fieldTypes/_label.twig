@@ -1,0 +1,14 @@
+
+{% if 
+  field is defined
+  and field
+  and field.label is defined
+  and field.label
+ %}
+  <span class="text-[18px] leading-[21px] font-semibold p-2">
+    {{ field.label }}
+    {% if field.required is defined and field.required  %}
+      <span>*</span>
+    {% endif %}
+  </span>
+{% endif %}
