@@ -18,7 +18,7 @@ Usage:
   and videoUrl is defined
   and videoUrl %}
   {% set flip = flip is defined and flip ? flip : false %}
-  <main class='pt-[37px] desktop:flex desktop:justify-center desktop:items-center 
+  <section class='pt-[37px] desktop:flex desktop:justify-center desktop:items-center 
     desktop:gap-[30px] desktop:pt-[64px] desktop:mb-10 {{ flip ? "flex-row-reverse" : "" }}'>
     
     <h1 class='text-center mb-[26px] font-bold text-[30px] leading-[40px]
@@ -40,5 +40,5 @@ Usage:
         {% include '_partials/_playButton.svg.twig' %}
       </button>
     </div>
-  </main>
+  </section>
 {% endif %}

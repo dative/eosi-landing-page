@@ -42,6 +42,9 @@ module.exports = {
         'mobile': '375px',
         'middle': '616px',
         'desktop': '1194px'
+      },
+      boxShadow: {
+        'form': '0px 10px 70px rgba(0, 0, 0, 0.08);'
       }
     },
   },

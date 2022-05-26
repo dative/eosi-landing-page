@@ -1,0 +1,29 @@
+{#
+
+checkÇist component
+
+Usage:
+
+{% include "_partials/_chackList.twig" with {
+  content: [
+      {
+        heading: 'Achieve Compliance',
+        text: 'Leverage our experience in ever-changing permit requirements and regulations.'
+      }
+    ]
+} %}
+#}
+
+{% if content is defined and content %}
+  {% for c in content %}
+    <div class='flex gap-[24px] mt-[48px]'>
+      <div class='chack-icon w-[48px] h-[48px]'></div>
+      <div class='flex-1'>
+        <h3 class='font-bold text-2xl leading-9 mb-[9px] 
+        desktop:font-extrabold desktop:text-[32px] desktop:leading-[42px]'>{{ c.heading }}</h3>
+        <p class='font-normal text-lg leading-[22px] text-gray-700
+        desktop:font-normal desktop:text-[22px] desktop:leading-[36px]'>{{ c.text }}</p>
+      </div>
+    </div>
+    {% endfor %}
+{% endif %}
