@@ -18,12 +18,8 @@ Usage:
   and videoUrl is defined
   and videoUrl %}
   {% set flip = flip is defined and flip ? flip : false %}
-  <section class='pt-[37px] desktop:flex desktop:justify-center desktop:items-center 
-    desktop:gap-[30px] desktop:pt-[64px] desktop:mb-10 {{ flip ? "flex-row-reverse" : "" }}'>
-    
-    <h1 class='text-center mb-[26px] font-bold text-[30px] leading-[40px]
-    middle:text-[44px] middle:leading-[48px] middle:max-w-[712px] middle:mx-auto
-    middle:font-normal desktop:text-6xl desktop:leading-[66px] desktop:text-left'>
+  <section class='pt-[37px] desktop:flex desktop:justify-center desktop:items-center desktop:gap-[30px] desktop:pt-[64px] desktop:mb-10 {{ flip ? "flex-row-reverse" : "" }}'>
+    <h1 class='text-center mb-[26px] font-bold text-[30px] leading-[40px] middle:text-[44px] middle:leading-[48px] middle:max-w-[712px] middle:mx-auto middle:font-normal desktop:text-6xl desktop:leading-[66px] desktop:text-left'>
       {{ heading|raw }}
     </h1>
 
@@ -37,7 +33,7 @@ Usage:
       <button type='butto'
         data-video='{{ videoUrl }}'
         class='absolute inset-0 flex items-center justify-center'>
-        {% include '_partials/_playButton.svg.twig' %}
+        <div class='play-button w-[55px] h-[55px] desktop:w-[82px] desktop:h-[82px]'></div>
       </button>
     </div>
   </section>

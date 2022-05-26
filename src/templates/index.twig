@@ -6,19 +6,23 @@
 {% endblock %}
 
 {% block content %}
+  <section class='max-w-desktop mx-auto px-[15px] pt-[15px] desktop:px-0'>
+    {% include "_partials/_videoBox.twig" with {
+      heading: "Never worry about your <strong class='font-bold middle:font-extrabold'>wastewater permit limits</strong> again.",
+      videoUrl: 'https://www.youtube.com/watch?v=Oddo4MVeeBY&ab_channel=LynyrdSkynyrd-Topic'
+    } %}
+  </section>
+
   <section class='bg-blue-700 mt-[-140px] desktop:mt-0 py-[30px]'>
     <div class='max-w-[706px] mx-auto px-[15px] desktop:px-0'>
-      <h2 class='text-2xl font-normal leading-8
-      text-center text-white pt-[140px] pb-[25px] desktop:p-0 desktop:text-[28px] 
-      desktop:leading-[36px] desktop:mb-[14px]'>
-      Empowering Clean Water® by enhancing the biological removal of harmful 
-      nutrients in wastewater.
+      <h2 class='text-2xl font-normal leading-8 text-center text-white pt-[140px] pb-[25px] desktop:p-0 desktop:text-[28px] desktop:leading-[36px] desktop:mb-[14px]'>
+        Empowering Clean Water® by enhancing the biological removal of harmful nutrients in wastewater.
       </h2>
-        {% include '_partials/_button.twig' with {
-          content: 'See How it Works ',
-          variant: 'video',
-          adjust: true
-        } %} 
+
+      <button type='button' class='flex gap-[9px] bg-transparent justify-center items-center px-4 py-3 text-white text-[16px] rounded-full font-bold border-2 border-white mx-auto'>
+        <div class='play-button w-[25px] h-[25px]'></div>
+        See How it Works 
+      </button>
     </div>
   </section>
 
@@ -30,9 +34,7 @@
         {% include '_partials/_computer.icon.twig' %}
 
         <div class='w-[224px] middle:w-[445px] middle:pt-[30px] desktop:w-[726px] desktop:pt-0'>
-          <h2 class='text-[18px] leading-[22px] font-normal middle:text-[44px] 
-            middle:leading-[48px] middle:text-center desktop:font-normal
-            desktop:gap-x-[92px] desktop:max-w-[736px] desktop:text-left'>
+          <h2 class='text-[18px] leading-[22px] font-normal middle:text-[44px] middle:leading-[48px] middle:text-center desktop:font-normal desktop:gap-x-[92px] desktop:max-w-[736px] desktop:text-left'>
             Are you having <strong class='font-extrabold'>issues</strong> with your wastewater treatment process?
           </h2>
         </div>
