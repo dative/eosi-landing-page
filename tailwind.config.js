@@ -44,7 +44,8 @@ module.exports = {
         'des': '1194px'
       },
       boxShadow: {
-        'form': '0px 10px 70px rgba(0, 0, 0, 0.08);'
+        'form': '0px 10px 70px rgba(0, 0, 0, 0.08);',
+        'button': '0px 8px 30px rgba(0, 0, 0, 0.2);'
       }
     },
   },
