@@ -2,9 +2,28 @@ const button = document.querySelector('[data-button]')
 const closeForm = document.getElementById('close-form')
 let formContainer = document.getElementById('form-container')
 
-const completmodal = () => {
-  closeForm?.classList.add('hidden')
-  creatMessage()
+const formValidate = () => {
+  //@ts-ignore
+  let form = document.forms["form"];
+    if (form['name']['value'] == '') {
+      form['name'].classList.remove('border-gray-300')
+      form['name'].classList.add('border-emphasis', 'focus:ring', 'focus:ring-emphasis', 'focus:ring-opacity-30')
+      alert("the name field is empty")
+      return false
+    }
+    if (form['email']['value'] == '') {
+      form['email'].classList.remove('border-gray-300')
+      form['email'].classList.add('border-emphasis', 'focus:ring', 'focus:ring-emphasis', 'focus:ring-opacity-30')
+      alert("the e-mail field is empty")
+      return false
+    }
+    if (form['phone']['value'] == '') {
+      form['phone'].classList.remove('border-gray-300')
+      form['phone'].classList.add('border-emphasis', 'focus:ring', 'focus:ring-emphasis', 'focus:ring-opacity-30')
+      alert("the phone field is empty")
+      return false
+    }
+    return true
 }
 
 const creatMessage = () => {
@@ -24,5 +43,13 @@ const creatMessage = () => {
   formContainer?.appendChild(div)
 }
 
+
+const completmodal = () => {
+  const isValidate = formValidate()
+  if (isValidate == true) {
+    closeForm?.classList.add('hidden')
+    creatMessage()
+  }
+}
 
 button?.addEventListener('click',  completmodal)

@@ -43,7 +43,7 @@
             </p>
           </div>
 
-          <form class='flex flex-col gap-7'>
+          <form id='form' class='flex flex-col gap-7'>
             {% for field in [
                 {
                   type: 'text',
@@ -61,7 +61,7 @@
                   placeHolder: 'john@doe.com',
                   value: '',
                   required: true,
-                  error: true
+                  error: false
                 },
                 {
                   type: 'tel',
