@@ -1,23 +1,36 @@
-<footer id='site-footer' class='max-w-desktop mx-auto p-[15px] mt-[-52px] desktop:mt-[-35px] desktop:p-0'>
-  <button type='button' class='flex p-5 w-[225px] bg-blue-700 text-[24px] leading-[38px] justify-center text-white rounded-full font-bold mx-auto desktop:w-[282px] desktop:h-[77px] desktop:font-semibold desktop:text-[32px] desktop:leading-[48px] desktop:p-4'>
+<footer id='site-footer' class='max-w-des mx-auto p-[15px] mt-[-52px] des:mt-[-35px] des:p-0'>
+  <button type='button' class='flex p-5 w-[225px] bg-blue-700 text-[24px] leading-[38px] justify-center text-white rounded-full font-bold mx-auto des:w-[282px] des:h-[77px] des:font-semibold des:text-[32px] des:leading-[48px] des:p-4'>
     Let’s fix it.
   </button>
   
-  <section class=' desktop:flex desktop:gap-[30px] mt-10 desktop:mt-[162px] mb-[64px] desktop:mb-[111px]'>
-    <div class='middle:max-w-[525px] middle:mx-auto desktop:max-w-[684px] desktop:mx-0'>
-      <h2 class='font-bold text-3xl text-center leading-10 desktop:font-normal desktop:text-[44px] desktop:leading-[48px] desktop:text-left'>
+  <section class=' des:flex des:gap-[30px] mt-10 des:mt-[162px] mb-[64px] des:mb-[111px]'>
+    <div class='mid:max-w-[525px] mid:mx-auto des:max-w-[684px] des:mx-0'>
+      <h2 class='font-bold text-3xl text-center leading-10 des:font-normal des:text-[44px] des:leading-[48px] des:text-left'>
         <strong class='font-bold'>Take better control</strong> of your biological and 
         contaminant removal process.
       </h2>
       {% include '_partials/_checkList.twig' with {
-        content: checkList
+        content:  [
+            {
+              heading: 'Achieve Compliance',
+              text: 'Leverage our experience in ever-changing permit requirements and regulations.'
+            },
+            {
+              heading: 'Minimize Operational Risk',
+              text: 'Reduce your risk with consistent on-time delivery and premium product quality.'
+            },
+            {
+              heading: 'Optimize Removal Costs',
+              text: 'Take the guesswork out of dosing and cut cost-per-pound of nutrients removed.'
+            }
+        ]
       } %}
     </div>
   
-    <div class='relative middle:w-[525px] middle:mx-auto'>
-      <div class='w-[92px] h-[92px] dot-grid relative mt-[13px] desktop:mt-0 desktop:left-[-44px] desktop:top-[-36px]'></div>
+    <div class='relative mid:w-[525px] mid:mx-auto'>
+      <div class='w-[92px] h-[92px] dot-grid relative mt-[13px] des:mt-0 des:left-[-44px] des:top-[-36px]'></div>
 
-      <div id='form-container' class='bg-white rounded-lg p-[30px] shadow-form mt-[-45px] relative z-10 middle:mx-auto desktop:mt-[-80px]'>
+      <div id='form-container' class='bg-white rounded-lg p-[30px] shadow-form mt-[-45px] relative z-10 mid:mx-auto des:mt-[-80px]'>
         
         <div id='close-form'>
           <div class='mb-[45px]'>
@@ -31,7 +44,44 @@
           </div>
 
           <form class='flex flex-col gap-7'>
-            {% for field in formfiels %}
+            {% for field in [
+                {
+                  type: 'text',
+                  name: 'name',
+                  label: 'Name',
+                  placeHolder: 'John Smith',
+                  value: '',
+                  required: true,
+                  error: false
+                },
+                {
+                  type: 'email',
+                  name: 'email',
+                  label: 'Email',
+                  placeHolder: 'john@doe.com',
+                  value: '',
+                  required: true,
+                  error: true
+                },
+                {
+                  type: 'tel',
+                  name: 'phone',
+                  label: 'Phone',
+                  placeHolder: '555-444-8888',
+                  value: '',
+                  required: true,
+                  error: false
+                },
+                {
+                  type: 'text',
+                  name: 'organization',
+                  label: 'Organization',
+                  placeHolder: 'Your Organization.',
+                  value: '',
+                  required: false,
+                  error: false
+                }
+            ] %}
               {% include '_fieldTypes/_' ~ field.type ~ '.twig' ignore missing with {
                 field: field
               } only %}
@@ -44,7 +94,7 @@
           </form>
         </div>
       </div>
-      <div class='w-[92px] h-[92px] dot-grid absolute pb-[18px] right-0 mt-[-45px] z-0 desktop:right-[-45px]'></div>
+      <div class='w-[92px] h-[92px] dot-grid absolute pb-[18px] right-0 mt-[-45px] z-0 des:right-[-45px]'></div>
     </div>
   </section>
 </footer>
