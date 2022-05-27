@@ -9,3 +9,10 @@
  * @Last Modified time: 2022-05-19 23:32:13
  *
  */
+
+ @layer base {
+   html,
+   body {
+     @apply bg-gray-100;
+   }
+ }
