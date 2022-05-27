@@ -3,21 +3,13 @@
 {% block headLinks %}
   {{ parent() }}
   <link rel="amphtml" href="/amp" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 {% endblock %}
 
 {% block content %}
   <section>
-    <h1>
-      content
-    </h1>
-  </section>
-{% endblock %}
+    {% include "_partials/_landingPage.twig" %}
 
-{% block subcontent %}
-  <section>
-    <h2>
-      subcontent
-    </h2>
   </section>
 {% endblock %}
 
